@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.box {
+/* .box {
   width: 200px;
   height: 200px;
   margin: 100px 0 0 150px;
@@ -20,5 +20,51 @@
   }
   100% {
     rotate: 360deg;
+  }
+} */
+
+.box {
+  background-color: black;
+  width: 200px;
+  height: 400px;
+}
+.light {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.red {
+  background-color: rgba(255, 0, 0, 0.328);
+  animation: red_light 4s infinite;
+}
+.green {
+  background-color: rgba(0, 128, 0, 0.334);
+  animation: green_light 4s infinite;
+  animation-delay: 1500ms;
+}
+
+@keyframes red_light {
+  0%,
+  50% {
+    background-color: rgba(255, 0, 0, 0.328);
+  }
+  70% {
+    background-color: red;
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0.328);
+  }
+}
+
+@keyframes green_light {
+  0%,
+  50% {
+    background-color: rgba(0, 128, 0, 0.334);
+  }
+  70% {
+    background-color: green;
+  }
+  100% {
+    background-color: rgba(0, 128, 0, 0.334);
   }
 }
