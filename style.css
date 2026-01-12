@@ -5,48 +5,20 @@
 }
 
 .box {
-  background-color: yellow;
   width: 200px;
   height: 200px;
   margin: 100px 0 0 150px;
-  animation: box_rotate 4s linear infinite;
+  border-radius: 50%;
+  border: 10px solid rgba(128, 128, 128, 0.345);
+  border-left-color: rgb(0, 102, 255);
+  animation: spinner 1500ms linear infinite;
 }
 
-.inner_child {
-  background-color: red;
-  width: 80px;
-  height: 80px;
-  animation: inner_box 2s linear infinite;
-}
-
-@keyframes box_rotate {
+@keyframes spinner {
   0% {
-    margin: 100px 0 0 150px;
-    rotate: 0deg;
-  }
-  25% {
-    margin: 100px 0 0 500px;
-  }
-  50% {
-    margin: 300px 0 0 500px;
-  }
-  75% {
-    margin: 300px 0 0 150px;
-  }
-
-  100% {
-    margin: 100px 0 0 150px;
-    rotate: 1000deg;
-  }
-}
-
-@keyframes inner_box {
-  0% {
-    background-color: red;
     rotate: 0deg;
   }
   100% {
-    background-color: green;
-    rotate: 2000deg;
+    rotate: 360deg;
   }
 }
